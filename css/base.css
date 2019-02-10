@@ -1,0 +1,11 @@
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,pre,dl,dt,dd,input,select,textarea{
+    margin:0;padding:0;border:0px;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    font-size:16px;
+    font-family: "Microsoft YaHei";
+}

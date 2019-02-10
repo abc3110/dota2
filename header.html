@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dota2_base.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <div class="wrap_dota2">
+        <div class="wrap_dota2-top-col">
+            <div class="wrap_dota2-top">
+                <div class="wrap_dota2-logo-dota2">
+                    <a href="index.html" target="_blank">
+                        <img src="img/index/header/logo-dota2.png" alt="">
+                    </a>
+                </div>
+                <div class="wrap_dota2-logo-shop">
+                    <a href="/" target="_blank">
+                        <img src="img/index/header/logo-shop.png" alt="">
+                    </a>
+                </div>
+                <div class="wrap_dota2-user-info">
+                    <span class="dota2_user_info">
+                        <a href="javascript:;" class="user-info-btn user-reg needLogin">登录</a>
+                        <a href="#" class="user-info-btn user-reg">快速注册</a>
+                    </span>
+                    <a href="/user/order" class="myorder needLogin" target="_blank">我的订单</a>
+                    <a href="/user/order" class="myfavorite needLogin" target="_blank">我的关注</a>
+                    <a href="/user/order" class="mycart top_cart_btn" target="_blank">我的购物车 (<span class="cartNum">0</span>)</a>
+                </div>
+                <div class="mycart-list top_cart_list">
+                    <p class="default">购物车里暂无商品</p>
+                </div>
+            </div>
+            <div class="wrap_dota2-top-nav">
+                <a href="/" class="on">首页</a>
+                <a href="#">游戏手办</a>
+                <a href="#">主题服饰</a>
+                <a href="#">创意T恤</a>
+                <a href="/product/list?cid=2">毛绒玩具</a>
+                <a href="/product/list?cid=3">生活用品</a>
+                <a href="/product/list?cid=4">特别限量</a>
+                <div class="wrap_dota2-top-search">
+                    <input type="text" data-old-key value="">
+                    <a href="javascript:;" class="btn-search"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap_dota2-float-nav">
+            <a href="/user/profile" target="_blank" title="个人中心" class="float-nav-btn float-nav-people needLogin"></a>
+            <a href="/user/fav" target="_blank" title="我的关注" class="float-nav-btn float-nav-heart needLogin"></a>
+            <a href="/cart/" target="_blank" class="float-nav-shop-btn">
+                购<br>物<br>车<span class="cartNum">2</span>
+            </a>
+            <a href="#" title="在线客服" class="float-nav-btn float-nav-talk needLogin"></a>
+        </div>
+    </div>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/header.js"></script>
+    <script type="text/template" id="top_cart_tpl">
+    
+        {{ if(cartList == null || cartList.length == 0){ }}
+        <p class="default">购物车里暂无商品</p>
+        {{ } else { }}
+        <div class="mycart-box">
+            <ul>
+                {{ for(var i = 0; i < cartList.length; i++){ }}
+                {{   var bean = cartList[i]; }}
+                {{   if(bean.productType == 1){ }}
+                <li data-pid="{{=bean.pid}}" class="suit">
+                    <p class="suit-all" style="word-wrap: break-word; word-break: break-all;">
+                        <span class="suit_pre">【套装】</span>{{=bean.name}}
+                    </p>
+                    {{   for(var j = 0; j < bean.productSuitBean.productList.length; j++){ }}
+                    {{      var psb = bean.productSuitBean.productList[j]; }}
+                    <div class="suit-detial">
+                        <dl class="cl">
+                            <dt>
+                                <img src="{{=psb.img}}_50.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <h4 class="ellipsis">{{=psb.name}}</h4>
+                                {{ if(psb.productSku != null){ }}
+                                <p class="ellipsis">{{=psb.productSku.skuStr}}</p>
+                                {{ } }}
+                            </dd>
+                        </dl>
+                        <a href="/product/{{=psb.pid}}" class="link" target="_blank"></a>
+                    </div>
+                    {{   } }}
+                    <span class="price">{{=getRmbPrice(bean.price)}} &times; {{=bean.number}}</span>
+                    <b class="del"></b>
+                </li>
+                {{   } else { }}
+                <li data-pid="{{=bean.pid}}">
+                    <dl class="cl">
+                        <dt>
+                            {{ if(bean.sellerId == 2 && bean.product.needDesign){ }}
+                            <span>定制</span>
+                            {{ } }}
+                            <img src="{{=bean.img}}_50.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <h4 class="ellipsis">{{=bean.name}}</h4>
+                            {{ if(bean.productSku != null){ }}
+                            <p class="ellipsis">{{=bean.productSku.skuStr}}</p>
+                            {{ } }}
+                        </dd>
+                    </dl>
+                    <span class="price">{{=getRmbPrice(bean.price)}} &times; {{=bean.number}}</span>
+                    <a href="/product/{{=bean.pid}}" class="link" target="_blank"></a>
+                    <b class="del"></b>
+                </li>
+                {{   } }}
+                {{ } }}
+            </ul>
+            <div class="totle cl">
+                <a href="/cart" target="_blank" class="btn-payforgoods">去购物车结算</a>
+                <p class="p-totle">共 <span class="cartNum">{{=sumNum}}</span> 件商品</p>
+                <p class="p-totlePrice">￥ {{=getRmbPrice(sumPrice)}}</p>
+            </div>
+        </div>
+        {{ } }}
+    </script>
+
+</body>
+</html> 

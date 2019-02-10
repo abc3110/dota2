@@ -1,0 +1,33 @@
+html,body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,pre,dl,dt,dd,form,input,button,textarea,option,img,a,select,textarea,span,em,strong,b,i{
+    margin:0;padding:0;
+}
+ul,li,div,dl,dt,dd{
+    list-style:none;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    font-size:12px;
+    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+    background-color:#fafafa;
+    min-width:1260px;
+    color:#474747;
+}
+a{
+    outline:0;
+    text-decoration: none;
+}
+a:hover,a.on{
+    text-decoration:none;
+    color:#e90404;
+}
+textarea,input{
+    resize:none;
+    outline:0;
+}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{
+    font-size:100%;
+    font-weight:normal;
+}

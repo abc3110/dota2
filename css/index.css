@@ -1,0 +1,210 @@
+#header{
+    width:100%;
+    min-width:1339px;
+    height:1056px;
+    position: relative;
+}
+.nav{
+    width: 100%;
+    min-width:1200px;
+}
+.box{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+}
+.nav, .box{
+    height:110px;
+}
+.nav{ 
+    background:url("../img/01_nav1.png") no-repeat center top;
+    background-size:cover;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.box::before{
+    content:"";
+    display:table;
+}
+.box>ul{
+    list-style:none;
+}
+.box>ul>li{
+    float:left;
+    width:112px;
+    height:65px;
+    text-align:center;
+    padding-top:22px;
+    margin-left:66px;
+}
+.box>ul>li:first-child{
+    margin-left:0px;
+}
+
+
+.box>ul>li>a{
+    color:#ccc;
+    text-decoration:none;
+}
+#header .box>ul>li:first-child+li+li+li{
+    margin-left:264px;
+}
+.role{
+    width:100%;
+    height:1256px;
+    background:url("../img/01_bg.jpg") no-repeat center 65px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.role .banner{
+    height:799px;
+}
+.role-img{
+    margin-left:29px;
+    position: relative;
+}
+.role>.box>.role-img>img{
+    position: absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+.role>.box>.role-img>img[data-role-img="default"]{
+    display:inline;
+}
+.role>.box{
+    position: relative;
+}
+.role .a1{
+    width:118px;
+    height:123px;
+    position: absolute;
+    animation:floating 1.3s ease-in-out infinite alternate;
+}
+.a1:first-child{
+    background:url("../img/2_bg-xvkong.png") no-repeat left top;
+    top:120px;
+    left:85px;
+}
+.role .a2{
+    width:164px;
+    height:177px;
+    position: absolute;
+    top:282px;
+    left:-61px;
+    background:url("../img/2_bg-chaoxi.png") no-repeat left top;
+    animation:floating 1.3s ease-in-out infinite alternate;
+    animation-delay: .6s;
+}
+.a1:nth-child(3){
+    background:url("../img/2_bg-bingnv.png") no-repeat left top;
+    top:586px;
+    left:173px;
+}
+.a1:nth-child(4){
+    background:url("../img/2_bg-fuwang.png") no-repeat left top;
+    top:559px;
+    right:181px;
+    animation-delay:0.6s;
+}
+.a1:nth-child(5){
+    background:url("../img/2_bg-fenghuang.png") no-repeat left top;
+    top:528px;
+    right:53px;
+}
+.role .zhizun{
+    position: absolute;
+    top:235px;
+    left:47px;
+}
+.floating{
+    z-index:10;
+}
+.floating:hover{
+    animation-play-state: paused;
+}
+@keyframes floating{
+    0%{
+        transform:translate(0,0);
+        opacity: .8;
+    }
+    100%{
+        transform:translate(0,12px);
+        opacity: 1;
+    }
+}
+.role .buy-btn{
+    width:242px;
+    height:107px;
+    position: absolute;
+    top:712px;
+    left:477px;
+    z-index:10;
+    background:url(../img/bg-btn.png) no-repeat left top;
+}
+.role .buy-btn:hover{
+    background-position: 0 -107px;
+}
+.panel{
+    width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    margin-top:30px;
+    text-align: center;
+}
+.panel .advert-item{
+    width:332px;
+    height:182px;
+}
+.panel .advert-content{
+    width:476px;
+    height:270px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition:all .6s ease;
+}
+.panel .advert-item:nth-of-type(1) .advert-content{
+    background-image:url(../img/bg-cover-group1.png);
+    padding: 42px 0 0 18px;
+    left:-80px;
+}
+.panel .advert-item:nth-of-type(2) .advert-content{
+    background-image:url(../img/bg-cover-group2.png);
+    padding: 43px 8px 0 0;
+    left:-64px;
+}
+.panel .advert-item:nth-of-type(3) .advert-content{
+    background-image:url(../img/bg-cover-group3.png);
+    padding: 41px 5px 0 0;
+    left:-64px;
+}
+.advert-content+h4{
+    font-size:18px;
+    color:#fff;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width:100%;
+    margin-top:-41px;
+    visibility: hidden;
+    opacity:0;
+    transition:all .5s ease;
+}
+.panel .advert-item:hover .advert-content{
+    transform:translateY(-28px);
+}
+.panel .advert-item:hover h4{
+    visibility: visible;
+    opacity:1;
+}
+#foot{
+    height:200px;
+    background-color:rgb(0,0,0);
+}

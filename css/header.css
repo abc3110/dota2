@@ -1,0 +1,244 @@
+.wrap_dota2{
+    min-width:1260px;
+    max-width:1920px;
+    margin:124px auto 0;
+    overflow:hidden;
+}
+/************************1.顶部导航栏*/
+.wrap_dota2-top-col{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background-color:#1f1f20;
+    min-width:1260px;
+}
+/********1.1 顶部log部分*/
+.wrap_dota2-top{
+    width:100%;
+    height:90px;
+    position:relative;
+    border-bottom:1px solid #333;
+}
+/*  dota2 logo*/
+.wrap_dota2-logo-dota2{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:226px;
+    height:32px;
+    margin-top: -16px;
+    margin-left:-630px;
+}
+/* 神秘商店 logo*/
+.wrap_dota2-logo-shop{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:132px;
+    height:64px;
+    margin-left:-380px;
+    margin-top:-32px;
+}
+/* 右侧a标签:span(2个a标签，按钮)和3个a标签*/
+.wrap_dota2-user-info{
+    position: absolute;
+    top:50%;
+    right:50%;
+    height:30px;
+    line-height:30px;
+    margin-top:-15px;
+    margin-right:-630px;
+}
+/* span中的的a标签按钮设置统一的样式*/
+.wrap_dota2-user-info a{
+    float:left;             /*统一变为块级元素*/
+    color:#999;
+    font-size:14px;
+    margin:0 16px;
+    height:100%;
+}
+/*user-reg:背景颜色和字体颜色*/
+.wrap_dota2-user-info a.user-reg{
+    background-color:#333435;
+    color:#999;
+}
+/*user-reg:鼠标悬停时的样式:橘红色背景、白色字体*/
+/*两个按钮由user-reg统一设置*/
+.wrap_dota2-user-info a.user-reg:hover{
+    background-color:#f85535;
+    color:#fff;
+}
+.wrap_dota2-user-info a.user-info-btn{
+    margin:0 5px;
+    width:78px;
+    border-radius:5px;
+    font-size:14px;
+    text-align:center;
+}
+/*span 后的a标签样式*/
+.wrap_dota2-user-info .myorder{
+    background:url("../img/index/header/icon-people2.png") 0 50% no-repeat;
+    padding-left:25px;
+}
+.wrap_dota2-user-info .myfavorite{
+    background:url("../img/index/header/icon-heart.png") 0 50% no-repeat;
+    padding-left:25px;
+}
+.wrap_dota2-user-info .mycart{
+    background:url("../img/index/header/icon-cart.png") 0 50% no-repeat;
+    padding-left:28px;
+}
+/*span 后的a标签鼠标悬停时的样式：更换背景图，字体颜色*/
+.wrap_dota2-user-info .myorder:hover{
+    background:url("../img/index/header/icon-people2-hov.png") 0 50% no-repeat;
+    color:#f85535;
+}
+.wrap_dota2-user-info .myfavorite:hover{
+    background:url("../img/index/header/icon-heart-hov2.png") 0 50% no-repeat;
+    color:#f85535;
+}
+.wrap_dota2-user-info .mycart:hover,.wrap_dota2-user-info .on{
+    background:url("../img/index/header/icon-cart-hov.png") 0 50% no-repeat;
+    color:#f85535;
+}
+/*隐藏的购物车片段*/
+.wrap_dota2-top .mycart-list{
+    display:none;
+    width:350px;
+    min-height:100px;
+    top:91px;
+    right:50%;
+    margin-right:-630px;
+    position:absolute;
+    background:#282829;
+    z-index:100;
+}
+.wrap_dota2-top .mycart-list .default{
+    text-align:center;
+    line-height:100px;
+    color:#999;
+}
+/********1.2 底部导航部分*/
+.wrap_dota2-top-nav{
+    width:1260px;
+    height:38px;
+    margin:0 auto;
+    line-height:38px;
+    overflow: hidden;
+}
+/*nav中的a标签统一样式*/
+.wrap_dota2-top-nav a{
+    float:left;
+    margin-right:40px;
+    padding:0 10px;
+    height:38px;
+    text-align: center;
+    color:#999;
+    font-size:16px;
+    position:relative;
+}
+/*左边导航*/
+.wrap_dota2-top-nav a:hover,.wrap_dota2-top-nav a.on{
+    color:#f85535;
+}
+.wrap_dota2-top-nav a:hover:after,.wrap_dota2-top-nav a.on:after{
+    display:block;
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background-color: #f85535;
+}
+/*右边搜索框*/
+.wrap_dota2-top-search{
+    float:right;
+    margin-left:30px;
+}
+.wrap_dota2-top-search input{
+    float:left;
+    width:156px;
+    height:34px;
+    line-height:34px;
+    background-color:#191919;
+    border:0;
+    color:#666;
+    text-indent:15px;
+}
+.wrap_dota2-top-search a{
+    margin:0;
+    width:38px;
+    height:38px;
+    background: #333 url("../img/index/header/icon-search.png") no-repeat center 8px;
+    padding:0;
+}
+/************************2.右侧购物车浮动框*/
+.wrap_dota2-float-nav{
+    position:fixed;
+    top:50%;
+    right:10px;
+    width:50px;
+    margin-top:-170px;
+    overflow: hidden;
+    z-index:999;
+}
+/*浮动导航中a的样式：浮动变为块，宽50px*/
+.wrap_dota2-float-nav a{
+    float:left;
+    width:50px;
+}
+/*float-nav-btn 高50px,背景颜色，背景重复，背景居中*/
+.wrap_dota2-float-nav a.float-nav-btn{
+    height:50px;
+    background-color:#1f1f20;
+    background-repeat:no-repeat;
+    background-position: center;
+} 
+/*2.1背景图片*/
+.wrap_dota2-float-nav a.float-nav-people{
+    background-image:url("../img/index/header/icon-people.png");
+}
+.wrap_dota2-float-nav a.float-nav-people:hover{
+    background-image:url("../img/index/header/icon-people-hov.png");
+}
+/*2.2背景图片*/
+.wrap_dota2-float-nav a.float-nav-heart{
+    background-image:url("../img/index/header/icon-heart.png");
+}
+.wrap_dota2-float-nav a.float-nav-heart:hover{
+    background-image:url("../img/index/header/icon-heart-hov.png");
+}
+/*2.3购物车*/
+.wrap_dota2-float-nav a.float-nav-shop-btn{
+    padding:45px 0 20px;
+    background:#f85535 url("../img/index/header/icon-shop.png") center 20px no-repeat;
+    color:#fff;
+    text-align:center;
+    font-size:16px;
+}
+.wrap_dota2-float-nav a.float-nav-shop-btn:hover{
+    background-color:#ff7357;
+}
+.wrap_dota2-float-nav a.float-nav-shop-btn span{
+    margin:10px auto 0;
+    display:block;
+    font-size:14px;
+    color:#f85535;
+    background-color:#fff;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    text-align:center;
+    line-height: 25px;
+}
+/*2.4客服*/
+.wrap_dota2-float-nav a.float-nav-talk{
+    background-image:url("../img/index/header/icon-talk.png");
+}
+.wrap_dota2-float-nav a.float-nav-talk:hover{
+    background-image:url("../img/index/header/icon-talk-hov.png");
+}
+
