@@ -312,8 +312,38 @@
 .new-goods li:hover img{
     transform: scale(1.02);
 }
-/*热销产品*/
+/***************近期热销栏************/
 .hot-products{
-    width:1260px;
-    margin:30px auto;
+    width:1268px;
+    margin:60px auto 0;
+    overflow: hidden;
+}
+.hot-products .title{
+    text-align:center;
+    font-size:24px;
+    font-weight: bold;
+    color:#f85535;
+    height:60px;
+    line-height:60px;
+    background:url(../img/index/title-bg.jpg) center center no-repeat;
+    position: relative;
+    margin-bottom:30px;
+}
+.hot-products .title::before{
+    content:"";
+    display:block;
+    width:20px;
+    height:100%;
+    background-color:#f85535;
+    position: absolute;
+    top:0;left:0;
+}
+.hot-products .products{
+    width:1268px;
+    overflow: hidden;
+}
+.hot-products .products img{
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
 }
