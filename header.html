@@ -57,74 +57,54 @@
             </a>
             <a href="#" title="在线客服" class="float-nav-btn float-nav-talk needLogin"></a>
         </div>
-    </div>
-    <script src="./js/jquery-1.11.3.js"></script>
-    <script src="./js/header.js"></script>
-    <script type="text/template" id="top_cart_tpl">
-    
-        {{ if(cartList == null || cartList.length == 0){ }}
-        <p class="default">购物车里暂无商品</p>
-        {{ } else { }}
-        <div class="mycart-box">
-            <ul>
-                {{ for(var i = 0; i < cartList.length; i++){ }}
-                {{   var bean = cartList[i]; }}
-                {{   if(bean.productType == 1){ }}
-                <li data-pid="{{=bean.pid}}" class="suit">
-                    <p class="suit-all" style="word-wrap: break-word; word-break: break-all;">
-                        <span class="suit_pre">【套装】</span>{{=bean.name}}
-                    </p>
-                    {{   for(var j = 0; j < bean.productSuitBean.productList.length; j++){ }}
-                    {{      var psb = bean.productSuitBean.productList[j]; }}
-                    <div class="suit-detial">
-                        <dl class="cl">
-                            <dt>
-                                <img src="{{=psb.img}}_50.jpg" alt="">
-                            </dt>
-                            <dd>
-                                <h4 class="ellipsis">{{=psb.name}}</h4>
-                                {{ if(psb.productSku != null){ }}
-                                <p class="ellipsis">{{=psb.productSku.skuStr}}</p>
-                                {{ } }}
-                            </dd>
-                        </dl>
-                        <a href="/product/{{=psb.pid}}" class="link" target="_blank"></a>
-                    </div>
-                    {{   } }}
-                    <span class="price">{{=getRmbPrice(bean.price)}} &times; {{=bean.number}}</span>
-                    <b class="del"></b>
-                </li>
-                {{   } else { }}
-                <li data-pid="{{=bean.pid}}">
-                    <dl class="cl">
-                        <dt>
-                            {{ if(bean.sellerId == 2 && bean.product.needDesign){ }}
-                            <span>定制</span>
-                            {{ } }}
-                            <img src="{{=bean.img}}_50.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <h4 class="ellipsis">{{=bean.name}}</h4>
-                            {{ if(bean.productSku != null){ }}
-                            <p class="ellipsis">{{=bean.productSku.skuStr}}</p>
-                            {{ } }}
-                        </dd>
-                    </dl>
-                    <span class="price">{{=getRmbPrice(bean.price)}} &times; {{=bean.number}}</span>
-                    <a href="/product/{{=bean.pid}}" class="link" target="_blank"></a>
-                    <b class="del"></b>
-                </li>
-                {{   } }}
-                {{ } }}
-            </ul>
-            <div class="totle cl">
-                <a href="/cart" target="_blank" class="btn-payforgoods">去购物车结算</a>
-                <p class="p-totle">共 <span class="cartNum">{{=sumNum}}</span> 件商品</p>
-                <p class="p-totlePrice">￥ {{=getRmbPrice(sumPrice)}}</p>
+        <div class="lunbo-banner">
+            <div class="lunbo-box">
+                <ul>
+                    <li class="show">
+                        <a href="#">
+                            <img src="img/index/lunbo01.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/index/lunbo02.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="ind">
+                    <span class="on"></span>   
+                    <span></span>
+                </div>
             </div>
         </div>
-        {{ } }}
-    </script>
-
+        <div class="new-goods">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/index/g01.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/index/g02.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/index/g03.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="hot-products">
+            <div class="title">近期热销</div>
+            <div class="products">
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html> 
