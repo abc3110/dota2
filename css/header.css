@@ -318,7 +318,7 @@
     margin:60px auto 0;
     overflow: hidden;
 }
-.hot-products .title{
+.title{
     text-align:center;
     font-size:24px;
     font-weight: bold;
@@ -329,7 +329,7 @@
     position: relative;
     margin-bottom:30px;
 }
-.hot-products .title::before{
+.title::before{
     content:"";
     display:block;
     width:20px;
@@ -347,6 +347,32 @@
     margin-left:10px;
     margin-top:10px;
 }
+/***************新品首售栏************/
+.first-sale{
+    margin: 60px 0px;
+}
+.first-sale .title-bg{
+    width:100%;
+    background-color:#f2f2f2;
+}
+.first-sale .title{
+    width:1268px;
+    color:#6f8cdf;
+    margin:0 auto 30px;
+}
+.first-sale .title::before{
+    background-color:#6f8cdf;
+}
+.first-sale li{
+    margin:10px auto 0;
+}
+.first-sale img{
+    width:100%;
+}
+
+
+
+
 
 /**************footer*********/
 .footer{
@@ -354,13 +380,14 @@
     background-color:#1f1f20;
     overflow: hidden;
 }
-/***两部分：第一部分*******/
+/***三部分：第一部分*******/
 .top-outer{
     width:100%;
     height:100px;
     border-bottom:1px solid #333;
     padding:20px 0;
 }
+.top-outer
 .top-inner{
     width:1200px;
     margin:0 auto;
@@ -378,7 +405,7 @@
     margin-right:10px;
     vertical-align: middle;
 }
-/***两部分：第二部分********/
+/***三部分：第二部分********/
 .middle-outer{
     width:1200px;
     margin:60px auto 100px;
@@ -422,9 +449,47 @@
     margin-bottom: 15px;
 }
 .contact-info p{
-    margin-bottom:15px;
+    margin-bottom:20px;
+}
+.content-info div{
+    text-align:center;
 }
 .contact-info a{
-    display: block;
+    display: inline-block;
     color:#999;
+    height:2em;
+    line-height:2em;
+    padding:0 10px;
+    border-radius: 5px;   
+}
+.contact-info a.kf{
+    background-color:#f85535;
+    color:#fff;
+}
+.contact-info a:hover{
+    text-decoration: underline;
+}
+/*三部分：第三部分*/
+.bottom-outer{
+    width:1200px;
+    margin:25px auto 30px;
+    text-align:center;
+}
+.bottom-outer p:first-child span{
+    margin-left:5px;
+    margin-right:5px;
+    color:#ddd;
+}
+.bottom-outer a{
+    color:#666;
+}
+.bottom-outer a:hover{
+    color:#e90404;
+}
+.bottom-outer p:first-child+p{
+    margin:20px 0;
+    color:#999;
+}
+.bottom-outer p:last-child a{
+    margin:0 3px;
 }
