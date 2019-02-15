@@ -372,6 +372,17 @@
 .first-sale img{
     width:100%;
 }
+/**************左侧悬浮框*********/
+.float-left-prompt{
+    width:193px;
+    height:265px;
+    position:fixed;
+    top:200px;
+    left:50px;
+    padding:50px 20px;
+    background:url(../img/index/bull_bg.png) no-repeat center top;
+    text-align:center;
+}
 
 /**************footer*********/
 .footer{
