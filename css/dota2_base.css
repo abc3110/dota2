@@ -1,4 +1,4 @@
-html,body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,pre,dl,dt,dd,form,input,button,textarea,option,img,a,select,textarea,span,em,strong,b,i{
+html,body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,pre,dl,dt,dd,form,input,button,textarea,option,img,a,select,textarea,span,em,strong,b,i,font{
     margin:0;padding:0;
 }
 ul,li,div,dl,dt,dd{
@@ -30,4 +30,8 @@ textarea,input{
 h1,h2,h3,h4,h5,h6,button,input,select,textarea{
     font-size:100%;
     font-weight:normal;
+}
+font,em{
+    font-size:normal;
+    font-family:\5b8b\4f53;
 }

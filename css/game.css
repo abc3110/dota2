@@ -1,0 +1,185 @@
+header,footer{
+    min-width:1260px;
+    max-width:1920px;
+    height:100px;
+    background-color:#1f1f20;
+}
+.header-nav{
+    width:1260px;
+    margin:0 auto;
+}
+.game-theme{
+    width:100%;
+    overflow:hidden;
+}
+/****级联导航*****/
+.game-theme .cas-nav-bg{
+    width:100%;
+    height:44px;
+    line-height:44px;
+    background-color:#f5f5f5;
+    color:#666;
+}
+.game-theme .cas-nav{
+    width:1239px;
+    margin:0 auto;
+}
+.game-theme .cas-nav a{
+    color:#666;
+}
+.game-theme .cas-nav a:hover{
+    color:#f00;
+}
+/****产品区*****/
+.game-products{
+    width:1239px;
+    margin:0 auto;
+}
+/*排序按钮*/
+.game-products .order-by{
+    margin:20px 0;
+    text-align:right;
+    font-size:14px;
+    overflow:hidden;
+    zoom:1;
+}
+.game-products .order-by a{
+    display:inline-block;
+    height:20px;
+    line-height:20px;
+    padding:0 27px;
+    border-right:1px solid #ddd;
+    color:#474747;
+    margin-right:-1px;
+}
+.order-by a span{
+    display:inline-block;
+    width:6px;
+    height:11px;
+    margin-left:7px;
+    overflow:hidden;
+    background:url("../img/game/base.png") no-repeat -218px 0;
+}
+.order-by a:hover{
+    color:#e90404;
+}
+.order-by a:hover span{
+    background:url("../img/game/base.png") no-repeat -212px 0;
+}
+/*产品列表*/
+.product-list{
+    margin-bottom: 100px;
+}
+.product-list::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.product-list>ul>li{
+    float:left;
+    width:278px;
+    height:310px;
+    margin-right:15px;
+    margin-bottom:15px;
+    padding-top:75px;
+    background-color:#fff;
+    position:relative;
+    text-align: center;
+    overflow: hidden;
+    transition:all 0.5s;
+}
+.product-list li .like{
+    position: absolute;
+    top:18px;
+    right:15px;
+    color:#999;
+    font-family:Arial;
+    line-height:14px;
+}
+.product-list li .like span{
+    width:14px;
+    height:11px;
+    background:url("../img/game/base.png") no-repeat -131px 0;
+    display:inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.product-list li .like:hover{
+    color:#e90404;
+}
+.product-list li .like:hover span{
+    background:url("../img/game/base.png") no-repeat -145px 0;
+}
+.product-list li img{
+    width:210px;
+    height:210px;
+    display: block;
+    margin:0 auto;
+}
+.product-list li .name{
+    text-align: center;
+    font-size:14px;
+    overflow:hidden;
+    padding:15px 15px 5px 15px;
+    max-height:38px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display:inline-block;
+}
+.product-list li .price{
+    font-size:18px;
+    color:#e90404;
+    font-family: Arial;
+}
+.product-list .add-cart-btn{
+    width:278px;
+    height:0;
+    background-color:rgba(0,0,0,0.8);
+    position: absolute;
+    bottom:0;
+    left:0;
+    opacity: 0;
+    transition:all .3s;
+}
+.add-cart-btn a{
+    display: block;
+}
+.add-cart-btn .stars{
+    width:75px;
+    height:14px;
+    background:url("../img/game/stars.png") no-repeat 0 -14px;
+    margin:12px auto;
+}
+.add-cart-btn .btn{
+    width:210px;
+    height:46px;
+    border:1px solid #fff;
+    margin:0 auto;
+    line-height:46px;
+    font-size:16px;
+    color:#fff;
+}
+.add-cart-btn .btn span{
+    width:24px;
+    height:18px;
+    margin-right:5px;
+    display:inline-block;
+    background:url("../img/game/base.png") no-repeat -183px -38px;
+    vertical-align: middle;
+}
+.add-cart-btn .btn:hover{
+    background-color:#e32332;
+    border-color:#e32332;
+}
+.product-list li:hover .add-cart-btn{
+    opacity: 1;
+    height:90px;
+}
+.product-list li:hover{
+    transform:translate(0,-2px);
+    box-shadow:0 3px 3px #ccc;
+}
+
+
