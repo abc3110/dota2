@@ -1,0 +1,267 @@
+header,footer{
+    min-width:1260px;
+    max-width:1920px;
+    height:100px;
+    background:#1f1f20;
+}
+.header-nav{
+    width:1260px;
+    margin:0 auto;
+}
+.cas-nav-bg{
+    height:44px;
+    line-height:44px;
+    background-color:#f5f5f5;
+    color:#666;
+}
+.cas-nav{
+    width:1239px;
+    margin:0 auto;
+}
+.cas-nav span{
+    margin:0 3px;
+}
+.theme-content{
+    background-color:#fff;
+    min-width:1260px;
+    max-width:1920px;
+    overflow:hidden;
+    padding:30px 0 40px 0;
+}
+.commodity-infor{
+    width:1239px;
+    margin:0 auto;
+}
+.commodity-infor::before{
+    content:"";
+    display:table;
+}
+.commodity-infor::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+/**左侧轮播图**/
+.com-img{
+    float:left;
+    width:430px;
+    margin-right:55px;
+}
+.com-img .bg-img{
+    margin-bottom:10px;
+    overflow: hidden;
+}
+.bg-img>ul{
+    width:1720px;
+    animation: carous 10s linear infinite;
+}
+.bg-img>ul>li{
+    float:left;
+}
+/***css动画实现轮播***/
+.bg-img>ul>li>img{
+    width:430px;
+    height:430px;
+}
+@keyframes carous{
+    20%{
+        margin-left:0px;
+    }
+    25%{
+        margin-left:-430px;
+    }
+    45%{
+        margin-left:-430px;
+    }
+    50%{
+        margin-left:-860px;
+    }
+    70%{
+        margin-left:-860px;
+    }
+    75%{
+        margin-left:-1290px;
+    }
+    95%{
+        margin-left:-1290px;
+    }
+    100%{
+        margin-left:0px;
+    }
+}
+.com-img .sm-img{
+    overflow:hidden;
+}
+.sm-img>ul>li{
+    float:left;
+    margin-right:10px;
+}
+.sm-img>ul>li:last-child{
+    margin-right:0px;
+}
+.sm-img>ul>li>img{
+    width:100px;
+    height:100px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.sm-img>ul>li>img:hover{
+    opacity: 1;
+}
+.sm-img>ul>li:first-of-type>img{
+    animation: img1 10s linear infinite;
+}
+.sm-img>ul>li:nth-of-type(2)>img{
+    animation: img2 10s linear infinite;
+}
+.sm-img>ul>li:nth-of-type(3)>img{
+    animation: img3 10s linear infinite;
+}
+.sm-img>ul>li:last-of-type>img{
+    animation: img4 10s linear infinite;
+}
+@keyframes img1{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    21%{
+        opacity:0.5;
+    }
+    95%{
+        opacity:0.5;
+    }
+    96%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes img2{
+    20%{
+        opacity: 0.5;
+    }
+    21%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    46%{
+        opacity: 0.5;
+    }
+}
+@keyframes img3{
+    46%{
+        opacity: 0.5;
+    }
+    47%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    71%{
+        opacity: 0.5;
+    }
+}
+@keyframes img4{
+    71%{
+        opacity: 0.5;
+    }
+    72%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    96%{
+        opacity: 0.5;
+    }
+}
+/**右侧条目区**/
+.com-item{
+    float:left;
+    width:680px;
+    height:400px;
+    border:1px solid #000;
+}
+.com-item h1{
+    font-size:30px;
+    line-height:46px;
+}
+.com-item p{
+    font-size:16px;
+    color:#666;
+    margin-top:15px;
+    margin-bottom:35px;
+}
+.com-item p.price{
+    font-size:26px;
+    color:#e90404;
+    padding:20px 0;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+.com-item dl{
+    font-size:14px;
+    margin:20px 0;
+}
+.com-item dt{
+    float: left;
+    width:80px;
+    color:#999;
+    height:40px;
+    line-height:40px;
+    margin-bottom: 10px;
+}
+.com-item dd{
+    float: left;
+    width:280px;
+    height:40px;
+    line-height:40px;
+    margin-bottom: 10px;
+}
+button.reduce,button.add{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    border:1px solid #ddd;
+    background:url("../img/details/base.png") no-repeat -233px -98px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+button.reduce:hover,button.add:hover{
+    background-color:#ddd;
+}
+button.reduce{
+    border-right:0;
+}
+button.add{
+    border-left:0;
+    background:url("../img/details/base.png") no-repeat -233px -133px;
+}
+input.num{
+    width:40px;
+    height:21px;
+    line-height:20px;
+    border:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    margin:0 -4px;
+    text-align:center;
+    padding-bottom:1px;
+}
+.btns a{
+    width:260px;
+    height:66px;
+    line-height:66px;
+    text-align:center;
+    border:1px solid red;
+    font-size:24px;
+    display:inline-block;
+    margin-right:26px;
+}
