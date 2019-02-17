@@ -30,4 +30,11 @@ $(window).load(function(){
             $a.addClass("on");
         }
     })
+    /**左侧浮动提示框的关闭按钮**/
+    $(".close").on("click",function(){
+        var $btnC=$(this);
+        var $parent=$btnC.parent();
+        $parent.css("display","none");
+
+    })
 })
