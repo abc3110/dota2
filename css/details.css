@@ -348,4 +348,10 @@ input.num{
     overflow: hidden;
     cursor: pointer;
 }
+.com-item .popus li{
+    float:left;
+    padding:5px 10px;
+    cursor: pointer;
+    line-height:1em;
+}
 
