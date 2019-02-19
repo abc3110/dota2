@@ -34,3 +34,9 @@ header,footer{
 .cart-null{
     display:none;
 }
+.del{
+    width:8px;
+    height:8px;
+    display: inline-block;
+    background:url("../img/shopcart/base.png") -292px 0;
+}

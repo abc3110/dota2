@@ -15,7 +15,7 @@ $(function(){
         pArray.push(product);
         var pArrStr=JSON.stringify(pArray);
         alert(pArrStr);
-        localStorage.setItem("carts",pArray);
+        localStorage.setItem("carts",pArrStr);
         console.log(localStorage.getItem("carts"));
     })
 })
