@@ -1,0 +1,36 @@
+header,footer{
+    min-width:1260px;
+    max-width:1920px;
+    height:100px;
+    background:#1f1f20;
+}
+/**级联导航***/
+.header-nav{
+    width:1260px;
+    margin:0 auto;
+}
+.cas-nav-bg{
+    height:44px;
+    line-height:44px;
+    background-color:#f5f5f5;
+    color:#666;
+}
+.cas-nav{
+    width:1239px;
+    margin:0 auto;
+}
+.cas-nav span{
+    margin:0 3px;
+}
+/**主体内容**/
+.theme-content{
+    width:1239px;
+    height:500px;
+    margin:0 auto;
+    background-color:#fff;
+    overflow:hidden;
+    padding:30px 0 40px 0;
+}
+.cart-null{
+    display:none;
+}

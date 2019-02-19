@@ -182,6 +182,32 @@ header,footer{
         opacity: 0.5;
     }
 }
+.commodity-infor .like{
+    display:block;
+    color:#999;
+    font-family:Arial;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.commodity-infor .like span{
+    width:14px;
+    height:11px;
+    background:url("../img/game/base.png") no-repeat -131px 0;
+    display:inline-block;
+    overflow: hidden;
+    margin-right:5px;
+}
+.commodity-infor .like font{
+    margin-left:5px;
+}
+.commodity-infor .like:hover{
+    color:#e90404;
+}
+.commodity-infor .like:hover span{
+    background:url("../img/game/base.png") no-repeat -145px 0;
+}
+
 /**右侧条目区**/
 .com-item{
     float:left;
@@ -353,5 +379,22 @@ input.num{
     padding:5px 10px;
     cursor: pointer;
     line-height:1em;
+}
+/******主体介绍部分*********/
+.theme-introduce {
+    width:1239px;
+    margin:42px auto 40px;
+}
+.theme-introduce::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+.theme-introduce .related{
+    width:160px;
+    height:500px;
+    padding:0px 15px 30px 15px;
+    background-color:#fff;
+    float:left;
 }
 
