@@ -182,6 +182,32 @@ header,footer{
         opacity: 0.5;
     }
 }
+.commodity-infor .like{
+    display:block;
+    color:#999;
+    font-family:Arial;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.commodity-infor .like span{
+    width:14px;
+    height:11px;
+    background:url("../img/game/base.png") no-repeat -131px 0;
+    display:inline-block;
+    overflow: hidden;
+    margin-right:5px;
+}
+.commodity-infor .like font{
+    margin-left:5px;
+}
+.commodity-infor .like:hover{
+    color:#e90404;
+}
+.commodity-infor .like:hover span{
+    background:url("../img/game/base.png") no-repeat -145px 0;
+}
+
 /**右侧条目区**/
 .com-item{
     float:left;
@@ -307,6 +333,11 @@ input.num{
     border:1px solid #e32331;
     color:#e90404;
 }
+.com-item .on{
+    background-color:#e32332;
+    border:1px solid #e32331;
+    color:#fff;
+}
 .com-item .to i{
     display:inline-block;
     width:12px;
@@ -315,6 +346,12 @@ input.num{
     background:url("../img/details/base.png") no-repeat 0 0;
     vertical-align: middle;
     overflow: hidden;
+}
+.com-item .to:hover i{
+    background-position:0 0;
+}
+.com-item .on i{
+    background-position: 0 -7px;
 }
 .com-item .popus{
     position: absolute;
@@ -328,6 +365,8 @@ input.num{
     box-shadow:0 3px 3px #ccc;
     background-color:#fff;
     z-index:2;
+    display:none;
+    transition:all 2s;
 }
 .com-item .popus .close{
     width:8px;
@@ -353,5 +392,22 @@ input.num{
     padding:5px 10px;
     cursor: pointer;
     line-height:1em;
+}
+/******主体介绍部分*********/
+.theme-introduce {
+    width:1239px;
+    margin:42px auto 40px;
+}
+.theme-introduce::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+.theme-introduce .related{
+    width:160px;
+    height:500px;
+    padding:0px 15px 30px 15px;
+    background-color:#fff;
+    float:left;
 }
 
