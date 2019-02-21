@@ -398,11 +398,16 @@ input.num{
     width:1239px;
     margin:42px auto 40px;
 }
+.theme-introduce::before{
+    content:"";
+    display: table;
+}
 .theme-introduce::after{
     content:"";
     display:block;
     clear: both;
 }
+/**猜你喜欢**/
 .theme-introduce .related{
     width:160px;
     height:500px;
@@ -410,4 +415,162 @@ input.num{
     background-color:#fff;
     float:left;
 }
+.related dt{
+    height:37px;
+    padding-top:23px;
+    border-bottom:1px solid #e0e0e0;
+    font-size:16px;
+}
+.related dd{
+    padding:15px 0 20px 0;
+    text-align:center;
+    border:1px solid #fff;
+}
+.related dd .img{
+    width:120px;
+    height:120px;
+    display:block;
+    margin:0 auto;
+}
+.related dd .name{
+    padding-top:10px;
+}
+.ellipsis{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    overflow-wrap:break-word;
+    word-break:break-all;
+    white-space:normal;
+}
+.related dd .price{
+    color:#e90404;
+}
+.related dd:hover{
+    border:1px solid #e32332;
+}
+/**介绍评论**/
+.theme-introduce .review{
+    width:980px;
+    float:right;
+    background:#fff;
+    position: relative;
+}
+.review .title-card{
+    overflow:hidden;
+    zoom:1;
+    padding:17px 0;
+    border-bottom:1px solid #e0e0e0;
+}
+.cf:before,.cf:after{
+    content:".";
+    display:block;
+    height:0;
+    visibility: hidden;
+}
+.cf:after{
+    clear:both;
+}
+.review .title-card li{
+    float:left;
+    width:200px;
+    height:25px;
+    line-height:25px;
+    font-size:18px;
+    text-align:center;
+    border-right:1px solid #e0e0e0;
+    color:#666;
+}
+.title-card li.curr a{
+    color:#e90404;
+}
+/**选卡一内容*/
+.desc-pane .comm-intro img{
+    display: block;
+    margin:0 auto;
+}
+.desc-pane .comm-comment{
+    padding:0px 40px 20px;
+    color:#666;
+    display:none;
+}
+.comm-comment .rate_header{
+    padding:38px 0 48px 0;
+}
+.comm-comment .rate_header::before{
+    content:".";
+    display:block;
+    height:0;
+    visibility: hidden;
+}
+.f_left{
+    float:left;
+}
+.comm-comment .rate_score{
+    width:133px;
+    text-align:center;
+}
+.comm-comment .rate_score .num{
+    color:#e90404;
+    font-family: Arial;
+    font-size:24px;
+}
+.comm-comment .rate_score .stars{
+    width:99px;
+    height:16px;
+    margin:0 auto 3px auto;
+    background:url(../img/details/stars2.png) no-repeat;
+}
+.comm-comment .rate_score .stars4{
+    background-position:0 -16px;
+}
+.comm-comment .rate_bar{
+    padding-left:50px;
+}
+.comm-comment .rate_bar th{
+    height: 29px;
+    padding-right:10px;
+    font-weight:normal;
+    text-align: left;
+}
+.comm-comment .rate_bar td p{
+    width:105px;
+    height:9px;
+    overflow:hidden;
+    background:#eceeed;
+}
+.comm-comment .rate_bar td p span{
+    display:block;
+    height:9px;
+    background-color:#e32332;
+}
+.comm-comment .rate_bar tr:first-of-type span{
+    width:83%;
+}
+.comm-comment .rate_bar tr:nth-of-type(2) span{
+    width:0%;
+}
+.comm-comment .rate_bar tr:last-of-type span{
+    width:17%;
+}
+.comm-comment .rate_header dl{
+    width:498px;
+}
+.comm-comment .rate_header dd{
+    width:435px;
+}
+.f_right{
+    float:right;
+}
+.comm-comment .rate_header dd a{
+    display:inline-block;
+    height:21px;
+    line-height: 21px;
+    padding:0 6px;
+    margin:0 0 8px 4px;
+    background-color:#fff6f7;
+    border:1px solid #fcbfc4;
+    color:#676664;
+}
+
 

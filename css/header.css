@@ -379,11 +379,7 @@
     position:fixed;
     top:200px;
     left:0;
-<<<<<<< HEAD
     padding:50px 20px;
-=======
-    padding:50px 24px;
->>>>>>> d568ab1d977b32f2f873fb5dad2e68cc8cf364d5
     background:url(../img/index/bull_bg.png) no-repeat center top;
 }
 .float-left-prompt .close{
