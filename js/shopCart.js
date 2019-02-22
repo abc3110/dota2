@@ -29,13 +29,13 @@ $(function(){
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>
+                                        <td>
                                             <input type="checkbox">全选
-                                        </th>
-                                        <th>商品名称</th>
-                                        <th>价格</th>
-                                        <th>关注</th>
-                                        <th>操作</th>
+                                        </td>
+                                        <td>商品名称</th>
+                                        <td>价格</th>
+                                        <td>关注</th>
+                                        <td>操作</th>
                                     <tr>
                                     ${str}
                                 </thead>

@@ -86,10 +86,7 @@ header,footer{
     position:relative;
     text-align: center;
     overflow: hidden;
-<<<<<<< HEAD
     /*transition:all 0.5s;*/
-=======
->>>>>>> d4f6edfa993e502b49773253c72828921f6d9be5
 }
 .product-list li .like{
     position: absolute;
