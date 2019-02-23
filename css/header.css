@@ -120,6 +120,45 @@
     line-height:100px;
     color:#999;
 }
+.mycart-list .product-list{
+    margin:0px 20px;
+    color:#ccc;
+}
+.mycart-list li{
+    border-bottom:1px solid #424242;
+    padding:15px 0;
+    overflow:hidden;
+    position: relative;
+}
+.mycart-list li img{
+    float:left;
+    margin-left:1px;
+    width:50px;
+    height:50px;
+}
+.mycart-list li span{
+    display: inline-block;
+    width:70px;
+}
+.mycart-list li>.pname{
+    margin-left:11px;
+    margin-right: 20px;
+    width:150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    overflow:hidden;
+}
+.mycart-list .link{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+.mycart-list .settlement{
+    margin:24px;
+}
 /********1.2 底部导航部分*/
 .wrap_dota2-top-nav{
     width:1260px;
