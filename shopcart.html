@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>产品详情</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="css/dota2_base.css">
     <link rel="stylesheet" href="css/shopcart.css">
 </head>
@@ -19,12 +19,75 @@
         </div>
     </nav>
     <section class="theme-content">  
-       <div class="cart-null">
-           <div class="content">
+       <div class="cart-null"style="display:none">
+           <div class="content" >
                <span></span>
                 购物车空空的哦~，赶紧
                 <a href="header.html">去选购</a>吧！
            </div>
+       </div>
+       <div class="cart-list">
+            <form>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><input type="checkbox">全选</td>
+                            <td>商品名称</td>
+                            <td>优惠</td>
+                            <td>数量</td>
+                            <td>价格</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <a href="product_details.html">
+                                    <img src="img/shopcart/cart-list-p1.jpg" title="DOTA2 - 扭蛋手办 II">
+                                </a>
+                                <h2><a href="#">DOTA2 - 扭蛋手办 II</a></h2>
+                                <p>快来加入我们的篝火晚会吧！ （随机开出7款中的1款）</p>
+                            </td>
+                            <td>优惠</td>
+                            <td>
+                                <button class="reduce"></button>
+                                <input type="text" class="num" value="1">
+                                <button class="add"></button>
+                            </td>
+                            <td class="price">￥138.00</td>
+                            <td>
+                                <a href="javascript:;" class="close">
+                                    <span></span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <a href="product_details.html">
+                                    <img src="img/shopcart/cart-list-p1.jpg" title="DOTA2 - 扭蛋手办 II">
+                                </a>
+                                <h2><a href="#">DOTA2 - 扭蛋手办 II</a></h2>
+                                <p>快来加入我们的篝火晚会吧！ （随机开出7款中的1款）</p>
+                            </td>
+                            <td>优惠</td>
+                            <td>
+                                <button class="reduce"></button>
+                                <input type="text" class="num" value="1">
+                                <button class="add"></button>
+                            </td>
+                            <td class="price">￥138.00</td>
+                            <td>
+                                <a href="javascript:;" class="close">
+                                    <span></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cf total_bar"></div>
+            </form>
        </div>
        <div class="guess-like">
            <div class="like-title">

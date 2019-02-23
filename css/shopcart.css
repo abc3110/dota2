@@ -22,14 +22,15 @@ header,footer{
 .cas-nav span{
     margin:0 3px;
 }
-/**主体内容**/
+/*************主题内容***************/
 .theme-content{
     width:1239px;
     height:500px;
     margin:0 auto;
     overflow:hidden;
-    padding:30px 0 40px 0;
+    padding:0 0 40px;
 }
+/***购物车为空***/
 .cart-null{
     display:none;
     position: relative;
@@ -57,14 +58,7 @@ header,footer{
     padding:0 5px;
     color:#e90404;
 }
-.guess-like{
-    background-color:#fff;
-}
-.guess-like .like-title{
-    height:60px;
-    line-height:60px;
-    font-size:
-}
+/***购物车列表***/
 .cart-list{
     margin-bottom:43px;
 }
@@ -72,19 +66,114 @@ header,footer{
     width:100%;
     background-color:#fff;
 }
-.cart-list table thead td{
-    height:54px;
-    font-size:14px;
-    color:#666;
-}
 .cart-list td{
     background-color:#fff;
     border-bottom: 1px solid #ededed;
     text-align: center;
 }
-.del{
+.cart-list table thead td{
+    height:54px;
+    font-size:14px;
+    color:#666;
+}
+.cart-list table td:first-child>input{
+    width:20px;
+    height:20px;
+    background-color:#fff !important;
+    border:1px solid #666;
+    border-radius:0px;
+}
+.cart-list tbody td:nth-child(2){
+    text-align:left;
+}
+.cart-list tbody td:nth-child(2) img{
+    float:left;
+    margin:30px 10px 30px 0px;
+    border:1px solid #ddd;
+}
+.cart-list tbody td:nth-child(2)>h2{
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.cart-list tbody td:nth-child(2)>h2>a{
+    max-width:400px;
+    height:20px;
+    font-size:14px;
+    color:#424242;
+}
+/***商品数量:加减按钮***/
+button.reduce,button.add{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    border:1px solid #ddd;
+    background:url("../img/details/base.png") no-repeat -233px -98px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+button.reduce:hover,button.add:hover{
+    background-color:#ddd;
+}
+button.reduce{
+    border-right:0;
+}
+button.add{
+    border-left:0;
+    background:url("../img/details/base.png") no-repeat -233px -133px;
+}
+input.num{
+    width:40px;
+    height:21px;
+    line-height:20px;
+    border:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    margin:0 -4px;
+    text-align:center;
+    padding-bottom:1px;
+}
+/***商品价格***/
+.cart-list tbody td.price{
+    color: #e90404;
+    font-size:20px;
+}
+a.close{
+    width:22px;
+    height:20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding-top:2px;
+}
+a.close:hover{
+    background:red;
+}
+a.close>span{
     width:8px;
     height:8px;
     display: inline-block;
     background:url("../img/shopcart/base.png") -292px 0;
+    overflow: hidden;
+}
+a.close:hover>span{
+    background-position: -292px -20px;
+}
+/**结算区**/
+.total_bar{
+    height:90px;
+    line-height:90px;
+    padding:0 32px 0 28px;
+    background:#fff;
+    margin-top:5px;
+    font-size:14px;
+    color:#666;
+}
+/*********************猜你喜欢******************/
+.guess-like{
+    background-color:#fff;
+}
+.guess-like .like-title{
+    height:60px;
+    line-height:60px;
+    font-size:
 }

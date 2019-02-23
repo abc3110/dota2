@@ -36,3 +36,12 @@ font,em{
     font-size:normal;
     font-family:\5b8b\4f53;
 }
+.cf::before,cf::after{
+    content:".";
+    display: block;
+    height:0;
+    visibility: hidden;
+}
+.cf::after{
+    clear: both;
+}

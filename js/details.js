@@ -1,4 +1,5 @@
 $(function(){
+    /*
     var qs=location.href.split("?")[1];
     var id=qs.split("=")[1];
     console.log(id);
@@ -11,6 +12,7 @@ $(function(){
             $(".commodity-infor>.com-item>h1").html(res[0].title);
         }
     }) 
+    */
     $(".shoppingPopus>.close").click(function(){
         var $close=$(this);
         $close.parent().hide();

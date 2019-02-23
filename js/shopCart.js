@@ -1,5 +1,5 @@
 $(function(){
-    showCartProduct();
+    //showCartProduct();
     function showCartProduct(){
         //获取localStorage
         var storeProducts=localStorage.getItem("carts");
@@ -47,7 +47,7 @@ $(function(){
         }
     }
     //删除按钮单击事件：
-    $("a.del").click(function(){
+    $("a.close").click(function(){
         localStorage.removeItem("carts");
         showCartProduct();
     })
