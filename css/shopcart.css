@@ -168,6 +168,49 @@ a.close:hover>span{
     font-size:14px;
     color:#666;
 }
+.a_left{
+    width:260px;
+    display: flex;
+    justify-content:space-between;
+}
+/*全选按钮*/
+.chbox{
+    width:18px;
+    height:18px;
+    display: inline-block;
+    border:1px solid #d4d4d4;
+    background: #fff;
+    vertical-align:middle;
+    margin-right:3px;
+    cursor: pointer;
+    position: relative;
+}
+.chbox>label{
+    width:12px;
+    height:9px;
+    display:inline-block;
+    position: absolute;
+    top:9px;
+    left:9px;
+    margin-left:-6px;
+    margin-top:-4px;
+}
+.chbox:hover>label{
+    background:url("../img/shopcart/base.png") no-repeat -81px -120px;
+}
+.chbox.curr_span:hover>label{
+    background:url("../img/shopcart/base.png") no-repeat -81px -104px;
+}
+.curr_span{
+    border:1px solid #e32323;
+    background-color:#e32323;
+}
+.curr_label{
+    background:url("../img/shopcart/base.png") no-repeat -81px -104px;
+}
+.a_left label{
+    cursor: pointer;
+}
 /*********************猜你喜欢******************/
 .guess-like{
     background-color:#fff;
@@ -175,5 +218,4 @@ a.close:hover>span{
 .guess-like .like-title{
     height:60px;
     line-height:60px;
-    font-size:
 }

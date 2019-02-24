@@ -55,4 +55,49 @@ $(function(){
     window.onstorage=function(){
         showCartProduct();
     }
+    //复选框添加单击事件
+    var chkState=true;
+    function modifyCheckboxState(){
+        if(chkState){
+            $("td>input[type=checkbox]").prop("checked",true);
+            if(!$(".chbox").hasClass("curr_span")){
+                $(".chbox").addClass("curr_span")
+                        .children(":first")
+                        .addClass("curr_label");
+            }
+        }else{
+            $("td>input[type=checkbox]").prop("checked",false);
+            if($(".chbox").hasClass("curr_span")){
+                $(".chbox").removeClass("curr_span")
+                        .children(":first")
+                        .removeClass("curr_label");
+            }
+        }
+    }
+    modifyCheckboxState();
+    function canelCheckboxState(){
+
+    }
+    $(".chbox").click(function(){
+        var $chbox=$(this);
+        $chbox.toggleClass("curr_span")
+                .children(":first") 
+                .toggleClass("curr_label");
+        if($chbox.hasClass("curr_span")){
+            chkState=true;
+        }else{
+            chkState=false;
+        }
+        modifyCheckboxState();
+    })
+    $("label[for]").click(function(){
+        var $label=$(this);
+        var id=$label.attr("for");
+        var $chbox=$("#"+id);
+        $chbox.toggleClass("curr_span")
+            .children(":first") 
+            .toggleClass("curr_label");
+        chkState=$chbox.hasClass("curr_span")?true:false;
+        modifyCheckboxState();
+    })
 })
