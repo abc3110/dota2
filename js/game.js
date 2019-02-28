@@ -20,5 +20,34 @@ $(function(){
         console.log(localStorage.getItem("carts"));
         //跳转到购物车页面
         location.href="shopcart.html";
-    })
+    });
+    //异步获取商品列表
+    ajax({
+        url:"http://127.0.0.1:3000/product/list",
+        type:"get",
+        dataType:"json"
+    }).then((res)=>{
+        console.log(res.data);
+        var $ul=$("<ul></ul>");
+        for(var i=0;i<res.data.length;i++){
+            var html=`<li>
+                <a href="#" class="like">
+                    <span></span>
+                    <font>${res.data[i].attention}</font>
+                </a>
+                <a href="product_details.html?id=1"><img src="${res.data[i].imgUrl}" alt=""></a>
+                <p class="name">${res.data[i].title}</p>
+                <p class="price">￥${res.data[i].price}</p>
+                <div class="add-cart-btn">
+                    <a href="javascript:;" class="stars"></a>
+                    <a href="javascript:;" class="btn addCart">
+                        <span></span>加入购入车
+                    </a>
+                </div>
+            </li>`;
+            var $li=$(html);
+            $ul.append($li);
+        }
+        $(".product-list").append($ul);
+    });
 })
