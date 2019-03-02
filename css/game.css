@@ -150,8 +150,26 @@ header,footer{
 .add-cart-btn .stars{
     width:75px;
     height:14px;
-    background:url("../img/game/stars.png") no-repeat 0 -14px;
+    background:url("../img/game/stars.png") no-repeat;
     margin:12px auto;
+}
+.add-cart-btn .stars5{
+    background-position: 0 0;
+}
+.add-cart-btn .stars4{
+    background-position: 0 -14px;
+}
+.add-cart-btn .stars3{
+    background-position: 0 -28px;
+}
+.add-cart-btn .stars2{
+    background-position: 0 -42px;
+}
+.add-cart-btn .stars1{
+    background-position: 0 -56px;
+}
+.add-cart-btn .stars0{
+    background-position: 0 -70px;
 }
 .add-cart-btn .btn{
     width:210px;

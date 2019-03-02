@@ -1,5 +1,7 @@
 $(function(){
     getProductInfo();
+    getProductPic();
+    //获取商品信息
     function getProductInfo(){
         var qs=location.href.split("?")[1];
         var id=qs.split("=")[1];
@@ -10,6 +12,37 @@ $(function(){
             success:function(res){
                 console.log(res);
                 $(".commodity-infor>.com-item>h1").html(res.data[0].title);
+                $(".commodity-infor>.com-item>.subtitle").html(res.data[0].subtitle);
+                $(".commodity-infor>.com-item>.price>span").html(res.data[0].price.toFixed(2));
+                $(".commodity-infor>.com-img>.like>font").text(res.data[0].attention);
+            }
+        }) 
+    } 
+    //获取商品图片
+    function getProductPic(){
+        var qs=location.href.split("?")[1];
+        var id=qs.split("=")[1];
+        $.ajax({
+            method:"get",
+            url:"http://127.0.0.1:3000/product/pic",
+            data:{id},
+            success:function(res){
+                console.log(res);
+                var $ul=$(".bg-img>ul");
+                var $sul=$(".sm-img>ul");
+                var $p=$(".comm-intro>p");
+                for(var i=0;i<res.data.length;i++){
+                    if(res.data[i].md!=null){
+                        var $bg=$(`<li><img src="${res.data[i].md}"></li>`);
+                        var $sm=$(`<li><img src="${res.data[i].sm}"></li>`);
+                        $bg.appendTo($ul);
+                        $sm.appendTo($sul);
+                    }if(res.data[i].intro!=null){
+                        var $intro=$(`<img src="${res.data[i].intro}" title="intro0${i}.jpg" alt="0${i}.jpg">`);
+                        $intro.appendTo($p);
+                    }
+                }
+                   
             }
         }) 
     } 

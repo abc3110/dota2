@@ -30,6 +30,9 @@ $(function(){
         //console.log(res.data);
         var $ul=$("<ul></ul>");
         for(var i=0;i<res.data.length;i++){
+            var d=res.data[i].stars;
+            var starsN="stars"+d;
+            console.log(starsN);
             var html=`<li>
                 <a href="#" class="like">
                     <span></span>
@@ -39,7 +42,7 @@ $(function(){
                 <p class="name">${res.data[i].title}</p>
                 <p class="price">￥${res.data[i].price}</p>
                 <div class="add-cart-btn">
-                    <a href="javascript:;" class="stars"></a>
+                    <a href="javascript:;" class="stars ${starsN}"></a>
                     <a href="javascript:;" class="btn addCart">
                         <span></span>加入购入车
                     </a>
@@ -48,6 +51,6 @@ $(function(){
             var $li=$(html);
             $ul.append($li);
         }
-        $(".product-list").append($ul);
+        $(".product-list").append($ul);  
     });
 })

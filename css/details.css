@@ -50,6 +50,8 @@ header,footer{
 .com-img .bg-img{
     margin-bottom:10px;
     overflow: hidden;
+    width:430px;
+    height:430px;
 }
 .bg-img>ul{
     width:1720px;
