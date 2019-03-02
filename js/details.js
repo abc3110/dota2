@@ -1,18 +1,18 @@
 $(function(){
-    /*
-    var qs=location.href.split("?")[1];
-    var id=qs.split("=")[1];
-    console.log(id);
-    $.ajax({
-        method:"get",
-        url:"http://127.0.0.1:3000/products",
-        data:{id},
-        success:function(res){
-            console.log(res);
-            $(".commodity-infor>.com-item>h1").html(res[0].title);
-        }
-    }) 
-    */
+    getProductInfo();
+    function getProductInfo(){
+        var qs=location.href.split("?")[1];
+        var id=qs.split("=")[1];
+        $.ajax({
+            method:"get",
+            url:"http://127.0.0.1:3000/product/detail",
+            data:{id},
+            success:function(res){
+                console.log(res);
+                $(".commodity-infor>.com-item>h1").html(res.data[0].title);
+            }
+        }) 
+    } 
     $(".shoppingPopus>.close").click(function(){
         var $close=$(this);
         $close.parent().hide();

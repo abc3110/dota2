@@ -27,7 +27,7 @@ $(function(){
         type:"get",
         dataType:"json"
     }).then((res)=>{
-        console.log(res.data);
+        //console.log(res.data);
         var $ul=$("<ul></ul>");
         for(var i=0;i<res.data.length;i++){
             var html=`<li>
@@ -35,7 +35,7 @@ $(function(){
                     <span></span>
                     <font>${res.data[i].attention}</font>
                 </a>
-                <a href="product_details.html?id=1"><img src="${res.data[i].imgUrl}" alt=""></a>
+                <a href="product_details.html?id=${res.data[i].id}"><img src="${res.data[i].imgUrl}" alt=""></a>
                 <p class="name">${res.data[i].title}</p>
                 <p class="price">￥${res.data[i].price}</p>
                 <div class="add-cart-btn">
